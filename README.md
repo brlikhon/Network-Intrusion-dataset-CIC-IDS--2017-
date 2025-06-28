@@ -2,7 +2,7 @@
 
 This project provides a comprehensive analysis of the CIC-IDS-2017 dataset to build and evaluate machine learning models for network intrusion detection. The entire pipeline, from data cleaning and exploratory analysis to model training, interpretation, and forensic investigation, is documented.
 
-## 🎯 Project Objectives
+## 📊 Project Overview
 
 The primary goals of this analysis are to:
 * Analyze the CIC-IDS-2017 intrusion detection dataset
@@ -10,7 +10,10 @@ The primary goals of this analysis are to:
 * Conduct a detailed forensic investigation into identified attacks
 * Develop a reproducible pipeline for network traffic analysis
 
-## 📊 Dataset Overview
+- **Advanced Data Analysis**: Comprehensive exploration of network flow features
+- **Machine Learning Models**: Implementation of 12 different algorithms for intrusion detection
+- **Forensic Investigation**: Professional cybersecurity analysis and reporting
+- **Model Interpretability**: SHAP and LIME analysis for explainable AI
 
 * **Dataset:** Canadian Institute for Cybersecurity - Intrusion Detection System 2017 (CIC-IDS-2017)
 * **Description:** The dataset contains network traffic captured over 5 days, including a wide variety of benign and malicious activities
@@ -20,17 +23,20 @@ The primary goals of this analysis are to:
     * Cleaned Records: 2,574,264 (90.9% data retention)
     * Attack Types: 14 unique attack categories were analyzed
 
-### 🚨 Attack Types Analyzed
-- BENIGN (Normal traffic)
-- DoS Hulk
-- DDoS attacks  
-- Port Scan
-- Web Attacks (Brute Force, XSS, SQL Injection)
-- DoS variants (GoldenEye, slowloris, Slowhttptest)
-- FTP-Patator & SSH-Patator
-- Bot attacks
-- Infiltration
-- Heartbleed
+The dataset includes network traffic captured from Monday to Friday, containing:
+
+- **Total Records**: 2,830,743 network flows
+- **Features**: 79 network flow characteristics
+- **Attack Types**: 15 different categories including:
+  - BENIGN (Normal traffic)
+  - DDoS attacks
+  - Port Scan
+  - Web Attacks (Brute Force, XSS, SQL Injection)
+  - DoS variants (Hulk, GoldenEye, slowloris, Slowhttptest)
+  - FTP-Patator & SSH-Patator
+  - Bot attacks
+  - Infiltration
+  - Heartbleed
 
 ## 🔬 Methodology
 
@@ -64,16 +70,11 @@ The **XGBoost** classifier was the top-performing algorithm with the following m
 * **Forensic Signature:** The "DoS Hulk" attack was characterized by an abnormally high `Max Packet Length` (10.53x higher than benign) and `Flow Duration` (5.34x higher), providing a clear signature for detection
 * **Temporal Patterns:** Attack types were concentrated on specific days. For instance, the DoS Hulk attack occurred exclusively on Wednesday, while DDoS and PortScan attacks were captured on Friday
 
-## 💻 Technologies and Libraries
-
-The project leverages the standard Python data science and machine learning ecosystem:
-
-* **Data Manipulation:** `pandas`, `numpy`
-* **Machine Learning:** `scikit-learn`, `xgboost`, `lightgbm`, `catboost`
-* **Data Visualization:** `matplotlib`, `seaborn`, `plotly`
-* **Model Interpretability:** `shap`, `lime`
-
-## 🛠️ Setup and Usage
+### Data Analysis
+- **Exploratory Data Analysis (EDA)**: Comprehensive statistical analysis
+- **Feature Engineering**: Advanced feature selection and dimensionality reduction
+- **Data Visualization**: Interactive plots using Matplotlib, Seaborn, and Plotly
+- **Data Quality Assessment**: Missing value analysis and data cleaning
 
 1. **Environment:** The analysis was designed to be run in a cloud environment like Google Colab or Kaggle Notebooks
 2. **Installation:** Install the required libraries using the provided command:
@@ -89,7 +90,7 @@ The project leverages the standard Python data science and machine learning ecos
 ## 🚀 Machine Learning Algorithms Implemented
 
 1. **Random Forest Classifier**
-2. **XGBoost** (Best performing)
+2. **XGBoost**
 3. **LightGBM**
 4. **CatBoost**
 5. **Support Vector Machine**
@@ -153,9 +154,7 @@ pip install -r requirements.txt
 ```
 
 3. **Download the CIC-IDS 2017 dataset**:
-   - **Official Source**: [CIC-IDS 2017 dataset page](https://www.unb.ca/cic/datasets/ids-2017.html)
-   - **Kaggle Primary**: [CIC-IDS-2017 dataset](https://www.kaggle.com/datasets/cicdataset/cicids2017)
-   - **Kaggle Alternative**: [Network Intrusion Dataset](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset)
+   - **Kaggle **: [Network Intrusion Dataset](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset)
    - Extract CSV files to the project directory
 
 ## 📁 Project Structure
@@ -189,18 +188,17 @@ The notebooks are optimized for both local and Kaggle environments:
 
 1. Upload the project to Kaggle
 2. Add the CIC-IDS 2017 dataset to your Kaggle notebook from available sources:
-   - [Primary CIC-IDS-2017 Dataset](https://www.kaggle.com/datasets/cicdataset/cicids2017)
-   - [Alternative Network Intrusion Dataset](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset)
+   - [Network Intrusion Dataset](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset)
 3. Run the notebooks with automatic environment detection
 
 ### 📊 Dataset Compatibility
 
-The analysis framework supports multiple CIC-IDS-2017 dataset sources:
-- **Flexibility**: Works with different Kaggle dataset uploads of the same underlying data
-- **Automatic Detection**: Notebooks automatically detect available CSV files
-- **Path Adaptation**: Smart path detection for different dataset directory structures
+- **Detection Accuracy**: Achieved >99% accuracy with ensemble methods
+- **Feature Importance**: Identified critical network flow characteristics
+- **Attack Classification**: Successfully classified 15 different attack types
+- **Real-time Capability**: Optimized models for production deployment
 
-## 🔍 Forensic Investigation Highlights
+## 🔍 Forensic Investigation
 
 The project includes comprehensive forensic analysis:
 
@@ -210,7 +208,7 @@ The project includes comprehensive forensic analysis:
 - **Professional Reporting**: Industry-standard cybersecurity documentation
 - **Evidence Preservation**: Proper handling of digital evidence for investigative purposes
 
-## 📈 Detailed Performance Metrics
+## 📈 Performance Metrics
 
 ### XGBoost Model Results:
 - **Accuracy**: 99.87% - Extremely high overall correctness
