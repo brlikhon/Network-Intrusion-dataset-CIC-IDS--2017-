@@ -80,7 +80,10 @@ The project leverages the standard Python data science and machine learning ecos
    ```bash
    pip install pandas numpy scikit-learn matplotlib seaborn ipykernel plotly scipy xgboost lightgbm catboost shap lime ipython
    ```
-3. **Data:** Download the CIC-IDS-2017 dataset from a source like Kaggle and place the CSV files in the appropriate directory as referenced in the notebook
+3. **Data:** Download the CIC-IDS-2017 dataset from available sources:
+   - **Primary Dataset**: [Kaggle CIC-IDS-2017 dataset](https://www.kaggle.com/datasets/cicdataset/cicids2017)
+   - **Alternative Source**: [Network Intrusion Dataset](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset)
+   - Place the CSV files in the appropriate directory as referenced in the notebook
 4. **Execution:** Run the notebook cells sequentially to reproduce the entire analysis pipeline
 
 ## 🚀 Machine Learning Algorithms Implemented
@@ -150,8 +153,9 @@ pip install -r requirements.txt
 ```
 
 3. **Download the CIC-IDS 2017 dataset**:
-   - Visit the [official CIC-IDS 2017 dataset page](https://www.unb.ca/cic/datasets/ids-2017.html)
-   - Alternative: Download from [Kaggle CIC-IDS-2017 dataset](https://www.kaggle.com/datasets/cicdataset/cicids2017)
+   - **Official Source**: [CIC-IDS 2017 dataset page](https://www.unb.ca/cic/datasets/ids-2017.html)
+   - **Kaggle Primary**: [CIC-IDS-2017 dataset](https://www.kaggle.com/datasets/cicdataset/cicids2017)
+   - **Kaggle Alternative**: [Network Intrusion Dataset](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset)
    - Extract CSV files to the project directory
 
 ## 📁 Project Structure
@@ -184,8 +188,17 @@ jupyter notebook
 The notebooks are optimized for both local and Kaggle environments:
 
 1. Upload the project to Kaggle
-2. Add the CIC-IDS 2017 dataset to your Kaggle notebook
+2. Add the CIC-IDS 2017 dataset to your Kaggle notebook from available sources:
+   - [Primary CIC-IDS-2017 Dataset](https://www.kaggle.com/datasets/cicdataset/cicids2017)
+   - [Alternative Network Intrusion Dataset](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset)
 3. Run the notebooks with automatic environment detection
+
+### 📊 Dataset Compatibility
+
+The analysis framework supports multiple CIC-IDS-2017 dataset sources:
+- **Flexibility**: Works with different Kaggle dataset uploads of the same underlying data
+- **Automatic Detection**: Notebooks automatically detect available CSV files
+- **Path Adaptation**: Smart path detection for different dataset directory structures
 
 ## 🔍 Forensic Investigation Highlights
 
