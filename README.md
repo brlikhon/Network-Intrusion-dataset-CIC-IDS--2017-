@@ -10,10 +10,13 @@ The primary goals of this analysis are to:
 * Conduct a detailed forensic investigation into identified attacks
 * Develop a reproducible pipeline for network traffic analysis
 
+This project provides:
 - **Advanced Data Analysis**: Comprehensive exploration of network flow features
 - **Machine Learning Models**: Implementation of 12 different algorithms for intrusion detection
 - **Forensic Investigation**: Professional cybersecurity analysis and reporting
 - **Model Interpretability**: SHAP and LIME analysis for explainable AI
+
+## 🎯 Dataset Description
 
 * **Dataset:** Canadian Institute for Cybersecurity - Intrusion Detection System 2017 (CIC-IDS-2017)
 * **Description:** The dataset contains network traffic captured over 5 days, including a wide variety of benign and malicious activities
@@ -70,11 +73,7 @@ The **XGBoost** classifier was the top-performing algorithm with the following m
 * **Forensic Signature:** The "DoS Hulk" attack was characterized by an abnormally high `Max Packet Length` (10.53x higher than benign) and `Flow Duration` (5.34x higher), providing a clear signature for detection
 * **Temporal Patterns:** Attack types were concentrated on specific days. For instance, the DoS Hulk attack occurred exclusively on Wednesday, while DDoS and PortScan attacks were captured on Friday
 
-### Data Analysis
-- **Exploratory Data Analysis (EDA)**: Comprehensive statistical analysis
-- **Feature Engineering**: Advanced feature selection and dimensionality reduction
-- **Data Visualization**: Interactive plots using Matplotlib, Seaborn, and Plotly
-- **Data Quality Assessment**: Missing value analysis and data cleaning
+## 🛠️ Setup and Usage
 
 1. **Environment:** The analysis was designed to be run in a cloud environment like Google Colab or Kaggle Notebooks
 2. **Installation:** Install the required libraries using the provided command:
@@ -82,15 +81,21 @@ The **XGBoost** classifier was the top-performing algorithm with the following m
    pip install pandas numpy scikit-learn matplotlib seaborn ipykernel plotly scipy xgboost lightgbm catboost shap lime ipython
    ```
 3. **Data:** Download the CIC-IDS-2017 dataset from available sources:
-   - **Primary Dataset**: [Kaggle CIC-IDS-2017 dataset](https://www.kaggle.com/datasets/cicdataset/cicids2017)
-   - **Alternative Source**: [Network Intrusion Dataset](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset)
+   - **Primary Dataset**: [Network Intrusion Dataset](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset)
    - Place the CSV files in the appropriate directory as referenced in the notebook
 4. **Execution:** Run the notebook cells sequentially to reproduce the entire analysis pipeline
 
-## 🚀 Machine Learning Algorithms Implemented
+## 🚀 Features
 
+### Data Analysis
+- **Exploratory Data Analysis (EDA)**: Comprehensive statistical analysis
+- **Feature Engineering**: Advanced feature selection and dimensionality reduction
+- **Data Visualization**: Interactive plots using Matplotlib, Seaborn, and Plotly
+- **Data Quality Assessment**: Missing value analysis and data cleaning
+
+### Machine Learning Algorithms
 1. **Random Forest Classifier**
-2. **XGBoost**
+2. **XGBoost** (Best performing)
 3. **LightGBM**
 4. **CatBoost**
 5. **Support Vector Machine**
@@ -154,7 +159,7 @@ pip install -r requirements.txt
 ```
 
 3. **Download the CIC-IDS 2017 dataset**:
-   - **Kaggle **: [Network Intrusion Dataset](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset)
+   - **Kaggle**: [Network Intrusion Dataset](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset)
    - Extract CSV files to the project directory
 
 ## 📁 Project Structure
@@ -191,7 +196,7 @@ The notebooks are optimized for both local and Kaggle environments:
    - [Network Intrusion Dataset](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset)
 3. Run the notebooks with automatic environment detection
 
-### 📊 Dataset Compatibility
+### 📊 Key Results
 
 - **Detection Accuracy**: Achieved >99% accuracy with ensemble methods
 - **Feature Importance**: Identified critical network flow characteristics
